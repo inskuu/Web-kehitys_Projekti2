@@ -47,7 +47,6 @@ padding: 70px;
 }
 
 .navigointi li {
-  float: left;
   margin-right: 20px;
 }
 
@@ -193,4 +192,37 @@ p {
   max-height: 800px;   
   overflow-y: auto;        
   padding-right: 10px;    
+}
+
+  /* Responsiivisuus */
+  @media (max-width: 768px) {
+    .kortti-rivi {
+        flex-direction: column;
+        gap: 20px;
+    }
+ 
+  .vasenkortti,
+  .keskimmainenkortti,
+  .oikeakortti {
+    flex: none;
+    width: 100%;            
+    margin: 0;               
+  }
+
+  #hahmokortti img {
+    position: static;
+    max-width: 100%;
+    height: auto;
+  }
+  }
+
+  @media (max-width: 768px) {
+    .navigointi {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  .haku {
+    width: 100%;
+  }
+
 }
