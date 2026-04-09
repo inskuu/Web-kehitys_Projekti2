@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montez&family=Schoolbell&display=swap" rel="stylesheet">
+    <title>Harry Potter</title>
+</head>
+<body>
+    <div class="kokosivu">
+    <header><h1>Hogwarts School of Witchcraft and Wizardry</h1></header>
+    <div class ="tausta">
+  
+
+<ul class="navigointi">
+  <li class="dropdown">
+    <button class="alasvetovalikko">Students</button>
+
+    <div class="valikonsisalto" id="opiskelijatLista">
+
+    </div>
+  </li>
+  <li class="dropdown">
+    <button class="alasvetovalikko">Teachers</button>
+
+    <div class="valikonsisalto" id="opettajatLista">
+    </div>
+  </li>
+  <li class="haku">
+        <form>
+    <input type="text" placeholder="Search by housename" id="hakukentta">
+    <button type="submit" id="hakunappi"></button>
+</form>
+</li>
+</ul>
+     <div class="kortti-rivi">
+
+             <div class="vasenkortti">
+<div class="kortti" id="hahmoKortti">
+    <h2>Choose a character</h2>
+</div>
+    </div>  
+
+<div class="keskimmainenkortti">
+          <div id="hakuTulokset" class="kortti">
+            <h3>Search by house to reveal its members</h3>
+          </div>
+        </div>
+  
+        <div class="oikeakortti">
+          <div class="kortti">
+            <h1>Hogwarts</h1>
+              <img src="kuvat/hogwarts.jpg" alt="Tylypahka" class="kuva">
+          </div>
+          </div>
+
+
+    </div>
+    </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
