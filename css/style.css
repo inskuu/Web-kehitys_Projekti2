@@ -85,7 +85,6 @@ z-index: 999;
   font-size: 18px;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
 }
 
 .navigointi li a:hover {
@@ -118,6 +117,8 @@ z-index: 999;
   padding: 9px;
   border-radius: 5px 0 0 5px;
   border: none;
+  font-family: "Schoolbell", cursive;
+  font-size: 18px;
 }
 
 .haku button {
@@ -198,7 +199,7 @@ p {
   @media (max-width: 768px) {
     .kortti-rivi {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
     }
  
   .vasenkortti,
@@ -206,11 +207,31 @@ p {
   .oikeakortti {
     flex: none;
     width: 100%;            
-    margin: 0;               
+    margin: 0;
+                  
+  }
+
+  #hakuTulokset {
+    max-height: 400px;
+    font-size: 14px; 
   }
 
   #hahmoKortti {
+    max-height: 400px;
+    overflow-y: auto;
     text-align: center;
+  }
+
+  p{
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
   }
 
   #hahmoKortti img {
