@@ -122,6 +122,18 @@ z-index: 999;
   cursor: pointer;
 }
 
+
+.virhe {
+    color: red;
+    border-color: #d32f2f;
+    font-weight: bold;
+}
+
+.virhe::placeholder {
+    color: red;
+}
+
+
   /* Korttipohja */
   .kortti {
     background-color: white;

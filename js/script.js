@@ -147,6 +147,12 @@ const tulokset = hahmot.filter(hahmo => kaannokset.house[hahmo.house] && kaannok
 const hakutulokset = document.querySelector("#hakuTulokset");
 hakutulokset.innerHTML = "";
 
+
+    if (tulokset.length === 0) {
+        hakutulokset.innerHTML = "<h1 class = 'virhe'>Ei hakutuloksia</h1>";
+        return;
+    }
+
 //Lisää tuvan nimi otsikoksi
     const houseName = tulokset[0].house;
     hakutulokset.innerHTML += `
@@ -166,11 +172,20 @@ hakutulokset.innerHTML = "";
 };
 
 //Hakunappi hakee hahmot tuvan perusteella. Napin painaminen tyhjentää hakukentän.
-const hakunappi = document.querySelector(".haku form");
+const hakunappi = document.querySelector("form");
 const hakukentta = document.querySelector("#hakukentta");
+const alkuperainenPlaceholder = hakukentta.placeholder;
 hakunappi.addEventListener("submit", function(e) {
     e.preventDefault();
 const sana = hakukentta.value.trim().toLowerCase();
+
+if (sana === "") {
+  hakukentta.placeholder = "Yritä uudestaan";
+  hakukentta.classList.add("virhe");
+  return;
+}
+hakukentta.classList.remove("virhe");
+hakukentta.placeholder = alkuperainenPlaceholder;
 haeTupa(sana);
 hakukentta.value ="";
 });
