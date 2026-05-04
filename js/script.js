@@ -175,17 +175,26 @@ hakutulokset.innerHTML = "";
 const hakunappi = document.querySelector("form");
 const hakukentta = document.querySelector("#hakukentta");
 const alkuperainenPlaceholder = hakukentta.placeholder;
+
 hakunappi.addEventListener("submit", function(e) {
     e.preventDefault();
 const sana = hakukentta.value.trim().toLowerCase();
 
+//Lisää virhe, jos tyhjä haku tai väärä hakusana
 if (sana === "") {
   hakukentta.placeholder = "Yritä uudestaan";
   hakukentta.classList.add("virhe");
-  return;
+  return; 
 }
+
 hakukentta.classList.remove("virhe");
 hakukentta.placeholder = alkuperainenPlaceholder;
 haeTupa(sana);
 hakukentta.value ="";
+});
+
+//Palauta hakukenttä ennalleen, kun aloitetaan uusi haku
+hakukentta.addEventListener("input", function () {
+    hakukentta.classList.remove("virhe");
+    hakukentta.placeholder = alkuperainenPlaceholder;
 });
